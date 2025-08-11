@@ -6,7 +6,7 @@
 /*   By: rgomes-g <rgomes-g@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 14:02:46 by rgomes-g          #+#    #+#             */
-/*   Updated: 2025/08/11 19:23:53 by rgomes-g         ###   ########.fr       */
+/*   Updated: 2025/08/11 19:42:56 by rgomes-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,13 @@ int	convert_int(va_list args)
 {
 	char	*buffer;
 	int		number;
-	size_t	len;
 	int		result;
 
 	number = va_arg(args, int);
 	buffer = ft_itoa(number);
 	if (!buffer)
 		return (0);
-	len = ft_strlen(buffer);
-	result = write(1, buffer, len);
+	result = write(1, buffer, ft_strlen(buffer));
 	free(buffer);
 	return (result);
 }

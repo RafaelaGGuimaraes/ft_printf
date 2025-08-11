@@ -6,7 +6,7 @@
 /*   By: rgomes-g <rgomes-g@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 14:03:11 by rgomes-g          #+#    #+#             */
-/*   Updated: 2025/08/11 19:17:43 by rgomes-g         ###   ########.fr       */
+/*   Updated: 2025/08/11 19:44:40 by rgomes-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,12 @@ static char	*int_to_hex(va_list args, char specifier);
 int	convert_hex(va_list args, char specifier)
 {
 	char	*buffer;
-	size_t	len;
 	int		result;
 
 	buffer = int_to_hex(args, specifier);
 	if (!buffer)
 		return (0);
-	len = ft_strlen(buffer);
-	result = write(1, buffer, len);
+	result = write(1, buffer, ft_strlen(buffer));
 	free(buffer);
 	return (result);
 }
