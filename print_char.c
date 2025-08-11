@@ -3,10 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   print_char.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rgomes-g <rgomes-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rgomes-g <rgomes-g@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 14:05:17 by rgomes-g          #+#    #+#             */
-/*   Updated: 2025/08/09 14:05:18 by rgomes-g         ###   ########.fr       */
+/*   Updated: 2025/08/10 20:25:30 by rgomes-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
+int	print_char(va_list args)
+{
+	char	c;
+
+	c = (char)va_arg(args, int);
+	return (write(1, &c, 1));
+}

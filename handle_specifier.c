@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   handle_specifier.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rgomes-g <rgomes-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rgomes-g <rgomes-g@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 14:04:24 by rgomes-g          #+#    #+#             */
-/*   Updated: 2025/08/09 19:07:28 by rgomes-g         ###   ########.fr       */
+/*   Updated: 2025/08/10 20:57:17 by rgomes-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		handle_specifier(char specifier, va_list args)
+int	handle_specifier(char specifier, va_list args)
 {
 	int	printed;
 
