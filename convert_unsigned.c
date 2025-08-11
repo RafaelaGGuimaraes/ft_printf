@@ -6,7 +6,7 @@
 /*   By: rgomes-g <rgomes-g@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 14:03:24 by rgomes-g          #+#    #+#             */
-/*   Updated: 2025/08/11 19:38:56 by rgomes-g         ###   ########.fr       */
+/*   Updated: 2025/08/11 19:42:09 by rgomes-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 static char	*ft_uitoa(unsigned int n);
 
 static int	ft_unumlen(unsigned int n);
-
-// static void	*ft_calloc(size_t nmemb, size_t size);
 
 int	convert_unsigned(va_list args)
 {
@@ -63,26 +61,3 @@ static int	ft_unumlen(unsigned int n)
 	}
 	return (len);
 }
-
-// static void	*ft_calloc(size_t nmemb, size_t size)
-// {
-// 	void			*ptr;
-// 	unsigned char	*zero;
-// 	size_t			i;
-
-// 	if (nmemb == 0 || size == 0)
-// 		return (malloc(0));
-// 	if (nmemb > (size_t) -1 / size)
-// 		return (NULL);
-// 	ptr = malloc(nmemb * size);
-// 	if (!ptr)
-// 		return (NULL);
-// 	zero = (unsigned char *)ptr;
-// 	i = 0;
-// 	while (i < nmemb * size)
-// 	{
-// 		zero[i] = '\0';
-// 		i++;
-// 	}
-// 	return (ptr);
-// }
